@@ -77,4 +77,5 @@ describe("Webdriverio main page", () => {
         await browser.pause(2000)
         console.log("Value attribute is:" + attr) //outputs: Cat
     });
+    
 });
