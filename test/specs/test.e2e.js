@@ -191,15 +191,43 @@ describe("Webdriverio main page", () => {
         await browser.url('https://webdriver.io');
         
     });
-    it ("Click API ", async ()=> {
+    xit ("Click API ", async ()=> {
         await browser.url('https://webdriver.io');
         
         let clickAPI = await $('nav a[href="/docs/api"]')
         await clickAPI.click()
         await expect(browser).toHaveUrl('https://webdriver.io/docs/api') // проверяем  URL
     });
+    xit ("Скрол в футер сайта к ссылке блог", async ()=> {
+        await browser.url('https://webdriver.io/docs/api');
+
+        const getStartedLink = await $('.footer__link-item[href="/blog"]')
+        await browser.pause(2000)
+
+        await getStartedLink.scrollIntoView()
+        await browser.pause(2000)
+        
+    }); 
+    it ("displayed", async ()=> {
+        await browser.url('https://webdriver.io/docs/api');
+
+        const getStartedLink = await $('.footer__link-item[href="/blog"]')
+        await browser.pause(2000)
+
+        await getStartedLink.scrollIntoView()
+
+        await browser.pause(2000)
+        const blogButton = await $('.footer__link-item[href="/blog"]')
+        let displayed = await blogButton.isDisplayed()
+        console.log("Is displayed: " + displayed)//outputs: true
+        
+    }); 
     xit ("", async ()=> {
 
         
-}); 
+    }); 
+    xit ("", async ()=> {
+
+        
+    }); 
 });
