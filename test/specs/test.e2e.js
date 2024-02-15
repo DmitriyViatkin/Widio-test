@@ -208,7 +208,7 @@ describe("Webdriverio main page", () => {
         await browser.pause(2000)
         
     }); 
-    it ("displayed", async ()=> {
+    xit ("displayed", async ()=> {
         await browser.url('https://webdriver.io/docs/api');
 
         const getStartedLink = await $('.footer__link-item[href="/blog"]')
@@ -220,6 +220,41 @@ describe("Webdriverio main page", () => {
         const blogButton = await $('.footer__link-item[href="/blog"]')
         let displayed = await blogButton.isDisplayed()
         console.log("Is displayed: " + displayed)//outputs: true
+        
+    }); 
+    xit ("isEnabled", async ()=> {
+        await browser.url('https://webdriver.io/docs/api');
+
+        const getStartedLink = await $('main nav a[href="/docs/api/protocols"]')
+        //await browser.pause(2000)
+
+        await getStartedLink.scrollIntoView()
+
+        //await browser.pause(2000)
+
+        let elem = await $('main nav a[href="/docs/api/protocols"]')
+        let isEnabled = await elem.isEnabled();
+        console.log('isEnabled '+isEnabled); // outputs: true
+
+        
+    }); 
+    it ("Проверка на кликабельность", async ()=> {
+        await browser.url('https://webdriver.io/docs/api');
+
+        const getStartedLink = await $('main nav a[href="/docs/api/protocols"]')
+        
+        await getStartedLink.scrollIntoView()
+
+        const blogButton = await $('main nav a[href="/docs/api/protocols"]')
+        let clickable  =await blogButton.isClickable()
+        console.log("is clickable: " + clickable)//outputs:true
+       
+       
+        
+    }); 
+
+    xit ("", async ()=> {
+
         
     }); 
     xit ("", async ()=> {
