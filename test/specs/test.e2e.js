@@ -173,7 +173,7 @@ describe("Webdriverio main page", () => {
         
     });
 
-    it ("should get html for certain element", async ()=> {
+    xit ("should get html for certain element", async ()=> {
 
         await browser.url('https://webdriver.io');
 
@@ -187,14 +187,17 @@ describe("Webdriverio main page", () => {
     
 //lesson 13
 
-    xit ("", async ()=> {
-
+    xit ("Open Site", async ()=> {
+        await browser.url('https://webdriver.io');
         
     });
-    xit ("", async ()=> {
-
+    it ("Click API ", async ()=> {
+        await browser.url('https://webdriver.io');
         
-});
+        let clickAPI = await $('nav a[href="/docs/api"]')
+        await clickAPI.click()
+        await expect(browser).toHaveUrl('https://webdriver.io/docs/api') // проверяем  URL
+    });
     xit ("", async ()=> {
 
         
