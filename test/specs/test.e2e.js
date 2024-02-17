@@ -173,7 +173,7 @@ describe("Webdriverio main page", () => {
         
     });
 
-    xit ("should get html for certain element", async ()=> {
+    it ("should get html for certain element", async ()=> {
 
         await browser.url('https://webdriver.io');
 

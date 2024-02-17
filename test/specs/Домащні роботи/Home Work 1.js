@@ -2,7 +2,7 @@ import { expect } from '@wdio/globals'
 
 describe("Webdriverio main page", () => {
 
-    it("open the site webdriver ", async () => {
+    xit("open the site webdriver ", async () => {
          
         await browser.url('https://webdriver.io/')// Открываем сайт: webdriver.io
         await browser.pause(2000)
@@ -11,7 +11,7 @@ describe("Webdriverio main page", () => {
 
         
     });
-    it ("click on API ", async () => {
+   xit ("click on API ", async () => {
         let linkAPI= await $('#__docusaurus > nav > div.navbar__inner > div:nth-child(1) > a:nth-child(4)')
 
         await browser.pause(2000)
@@ -22,19 +22,19 @@ describe("Webdriverio main page", () => {
         
 
     });
-    it ("Check title", async () => {
+    xit ("Check title", async () => {
 
             await browser.url('https://webdriver.io/docs/api/')
     
             let title = await $("h1=Introduction")
             await expect(title).toHaveText('Introduction')
     });
-    it("Check WebDriver",async()=>{
+    xit("Check WebDriver",async()=>{
             const link = await $('=WebDriver')
             await expect(link).toHaveHref('/docs/api/webdriver')
     });
 
-    it ("Check Search",async () => {
+    xit ("Check Search",async () => {
 
             let lincSearch = await $('.DocSearch-Button-Placeholder=Search')
             await browser.pause(1000)
