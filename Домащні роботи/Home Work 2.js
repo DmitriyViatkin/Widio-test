@@ -1,6 +1,6 @@
 import { expect } from '@wdio/globals'
 
-describe("Webdriverio main page", () => {
+//describe("Webdriverio main page", () => {
 
     xit ("Open Site", async ()=> {
         await browser.url('https://webdriver.io');
@@ -96,4 +96,4 @@ describe("Webdriverio main page", () => {
         },5000, "Button is not displayed")
 
     }); 
-});
+//});

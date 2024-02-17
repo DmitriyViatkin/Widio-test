@@ -1,6 +1,6 @@
 import { expect } from '@wdio/globals'
 
-describe("Webdriverio main page", () => {
+//describe("Webdriverio main page", () => {
 
     xit("open the site webdriver ", async () => {
          
@@ -46,4 +46,4 @@ describe("Webdriverio main page", () => {
             await inputSearch.clearValue()
             await browser.pause(1000)
     });
-});
+//});
