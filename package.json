@@ -11,6 +11,6 @@
     "wdio": "wdio run ./wdio.conf.js"
   },
   "dependencies": {
-    "chromedriver": "^121.0.0"
+    "chromedriver": "^121.0.1"
   }
 }
