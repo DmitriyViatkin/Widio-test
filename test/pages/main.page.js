@@ -6,6 +6,16 @@ class MainPage {
     get searchInput() {return $('#txtGlobalSearch')}
     get gameDevBtn() {return $('.menu-site.menu-site__gamedev')}
     get relocteBtn() {return $('.menu-site_relocate')}
+    get JobBtn() {return $('a[href="https://jobs.dou.ua/"]')}
+    
+    
+    async clickOnsalariesBtn(){
+        (await this.salariesBtn).click()
+    }
+       
+    async clickOnJobBtn(){
+        (await this.JobBtn).click()
+    }
 
     async clickOnForumBtn(){
         (await this.forumBtn).click()

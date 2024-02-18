@@ -1,7 +1,4 @@
 import MainPage  from "./../pages/main.page.js"
-//import GameDevPage from "./../pages/gamedev.page.js";
-//import GameDevPageTopRatesPage from "../pages/gamedevToprates.page.js";
-//import GameDevPage from "./../pages/gamedev.page.js";
 import SalariesPage from "./../pages/salaries.page.js";
 import JobPage from "./../pages/Job.page.js";
 
@@ -23,18 +20,7 @@ describe ("Home work lesson 23", () => {
 //5. перевірить видимість кнопки "Знайти"
     await JobPage.isDisplayedserchBtn()
 
-       // await MainPage.clickOnForumBtn()
-        //await browser.pause(2000)
-
-        //await MainPage.clickOnBandBtn()
-       // await browser.pause(2000)
-
-        //await MainPage.clickOnGameDevBtn()
-        //await browser.pause(2000)
-
-       // expect(GameDevPage.companyGameDevsRateLink).toBeClickable()
-       // await GameDevPage.clickOnTopGamesRateLink()
-        //expect (GameDevPageTopRatesPage.title).toHaveValue("Матеріали на тему <<топ ігор місяця>>")
+      
     });
     
 })
