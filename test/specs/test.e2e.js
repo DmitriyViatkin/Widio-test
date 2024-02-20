@@ -7,7 +7,7 @@ import PricingPage from "./../git_page/pricing.page.js";
 
 describe ("Home work lesson 25", () => {
 
-    xit ("TestCase 1", async() => {
+    it ("TestCase 1", async() => {
 //1.Зайти на сайт GitHub
          await browser.url('https://github.com');
          await browser.pause (2000)
@@ -39,7 +39,7 @@ describe ("Home work lesson 25", () => {
 //12. нажать продолжить
          await GitMainPage.clickOnContinueBtn()
     });
-    xit ("TestCase 2", async() => {
+    it ("TestCase 2", async() => {
 //1 Відкриваємо сайт 
          await browser.url('https://github.com');
          await browser.pause (2000)
@@ -72,24 +72,23 @@ describe ("Home work lesson 25", () => {
          await ResurcesPage.inputWorkEmail()       
 //8 нажимаем на випадающий список
          await ResurcesPage.ClicCountry()
+         await browser.pause(2000)
 //9 клик по країні в списку
          await ResurcesPage.ClicCountryValue()
+         await browser.pause(2000)
 //10 нажимаєм на  check box 
-
          await ResurcesPage.ClicCheckBoxSub()
-//11 нажимаєм на кнопку Subscrib
+         await browser.pause(2000)
+//11 нажимаєм на кнопку Subscrib     
+         //await ResurcesPage.ScrollWorkerBtn()
          await browser.pause(2000)
          await ResurcesPage.ClicSubscribBtn()
-
-         await ResurcesPage.ClicSubscribBtn()
          await browser.pause(2000)
-        
-
-//12 Проверяєм заголовок
+//12 Проверяєм заголовок       
          await ResurcesPage.checkSubText()
 
         })
-    xit ("TestCase 4", async() => {
+    it ("TestCase 4", async() => {
         //1 откриваєм сайт GitHub
                                 await browser.url('https://github.com');
                                 await browser.pause (2000)
@@ -106,7 +105,7 @@ describe ("Home work lesson 25", () => {
                 await SearchPage.CheckTextSearch()   
                 
         })
-xit ("TestCase 5", async () => {
+    it ("TestCase 5", async () => {
 
 //1 Відкрити сайт GitHub
         await browser.url('https://github.com');
@@ -122,6 +121,6 @@ xit ("TestCase 5", async () => {
 //6 Перевірити заголовок "Compare features"
         await PricingPage.CheckTitle2()
 
-})
+        })
 
 })
