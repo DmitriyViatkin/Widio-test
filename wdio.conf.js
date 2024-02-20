@@ -51,8 +51,8 @@ export const config = {
     //
     capabilities: [{
         // capabilities for local browser web tests
-        browserName: 'chrome',// 'chrome' or , "microsoftedge", "safari"
-        browserVersion:'122.0.6261.39',
+        browserName: 'firefox',// 'chrome' or 'firefox', "microsoftedge", "safari"
+        //browserVersion:'122.0.6261.39',
     }],
 
     //
@@ -131,7 +131,7 @@ export const config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 70000
     },
 
     //
