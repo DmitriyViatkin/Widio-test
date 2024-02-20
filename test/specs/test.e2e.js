@@ -9,107 +9,84 @@ describe ("Home work lesson 25", () => {
 
     xit ("TestCase 1", async() => {
 //1.Зайти на сайт GitHub
-        await browser.url('https://github.com');
-        await browser.pause (2000)
+         await browser.url('https://github.com');
+         await browser.pause (2000)
 //2.Нажать на Signup
-        await GitMainPage.clickOnSignupBtn()
-        await browser.pause (2000)
+         await GitMainPage.clickOnSignupBtn()
+         await browser.pause (2000)
 //3.Ждать появления инпута 
-        await browser.waitUntil(async () =>{
-        return (await $('GitMainPage.Text')).isDisplayed();
-                },20000, "email is not displayed")
-        browser.pause(2000)
-
-
-        await browser.waitUntil(async () =>{
-        return (await $('#email')).isDisplayed();
-                },60000, "email is not displayed")
-        browser.pause(2000)
+         await GitMainPage.waitUntilText()
+         browser.pause(2000)
             
 //4.Провірить наявність тексту
         expect (GitMainPage.text).toHaveValue("Welcome to GitHub!")
 //5. Ввести мейл
-        await GitMainPage.InputEmail()
+         await GitMainPage.InputEmail()
+         await browser.pause (2000)
 //6. нажать продолжить
-        //await GitMainPage.waitUntilContinue()
-        await GitMainPage.clickOnContinueBtn()
-
+         await GitMainPage.clickOnContinueBtn()
+         await browser.pause (2000)
 //7. ввести пароль
-        await GitMainPage.inputpassword()
+         await GitMainPage.InputPassword()
 //8. Нажать продолжить
-        await GitMainPage.clickOnContinueBtn()
+         await GitMainPage.clickOnContinueBtn()
 //9.ввести юсер нейм
-        await browser.waitUntil(async () =>{
-        return (GitMainPage.inputUserName).isDisplayed();
-                },60000, "email is not displayed")
-        browser.pause(2000)
-        
-        await GitMainPage.InputUserName()
+         await GitMainPage.InputUserName()
 //10. нажать продолжить
          await GitMainPage.clickOnContinueBtn()
 //11. ввести "у"
-        await GitMainPage.clickOncheckBoxBtn()
+         await GitMainPage.clickOncheckBoxBtn()
 //12. нажать продолжить
-        await GitMainPage.clickOnContinueBtn()
+         await GitMainPage.clickOnContinueBtn()
     });
     xit ("TestCase 2", async() => {
-//1
-        await browser.url('https://github.com');
-        await browser.pause (2000)
-//2 Scrol 
-        await GitMainPage.FutertxtScrol()
-
-       
-     await browser.pause(2000)
-      await GitMainPage.linckVisible()
-//3
-     await GitMainPage.linkDisk.click()
-//4
-await GitMainPage.checkH1teext()
+//1 Відкриваємо сайт 
+         await browser.url('https://github.com');
+         await browser.pause (2000)
+//2 Скролимо в футер
+         await GitMainPage.FutertxtScrol()
+         await browser.pause(2000)
+         await GitMainPage.linckVisible()
+         await browser.pause(2000)
+//3 Переходимо по ссилці
+         await GitMainPage.linkDisk.click()
+//4 Перевіряємо заголовок
+         await GitMainPage.checkH1teext()
 
     })
-    xit ("TestCase 3", async() => {
-//1 откриваєм сайт GitHub
+    it ("TestCase 3", async() => {
+//1 Відкриваємо сайт GitHub
                 await browser.url('https://github.com');
                 await browser.pause (2000)
  //2 скролим в футер
         await GitMainPage.ScrollfuterSubscrible()
-//3 проверка на клиакбельность
+//3 перевіряємо на клиакбельность
         await GitMainPage.futerSubscribleclicable()
-//4 нажимаем на кнопку
+//4 натимскаєм на кнопку
         await GitMainPage.futerSubscribleclick()
-//5 проверяєм URL
-       
-        await ResurcesPage.CheckUrl()
-
-//6 проверяєм заголовок
-
-        await ResurcesPage.ChecText()
-
+//5 перевіряємо URL
+         await ResurcesPage.CheckUrl()
+//6 перевіряємо заголовок
+         await ResurcesPage.ChecText()
 //7 вводим worck email
-        await ResurcesPage.ScrollWorkerEmail()
-        await ResurcesPage.WorkerEmailClick()
-        await ResurcesPage.inputWorkEmail()
-        //
-       
-        
-//8 нажимаем на віпадающий список
-        await ResurcesPage.ClicCountry()
-//9 клик по страну в списке
-        await ResurcesPage.ClicCountryValue()
+         await ResurcesPage.inputWorkEmail()       
+//8 нажимаем на випадающий список
+         await ResurcesPage.ClicCountry()
+//9 клик по країні в списку
+         await ResurcesPage.ClicCountryValue()
 //10 нажимаєм на  check box 
 
-        await ResurcesPage.ClicCheckBoxSub()
+         await ResurcesPage.ClicCheckBoxSub()
 //11 нажимаєм на кнопку Subscrib
-        await browser.pause(2000)
-        await ResurcesPage.ClicSubscribBtn()
+         await browser.pause(2000)
+         await ResurcesPage.ClicSubscribBtn()
 
-        await ResurcesPage.ClicSubscribBtn()
-        await browser.pause(2000)
+         await ResurcesPage.ClicSubscribBtn()
+         await browser.pause(2000)
         
 
 //12 Проверяєм заголовок
-        await ResurcesPage.checkSubText()
+         await ResurcesPage.checkSubText()
 
         })
     xit ("TestCase 4", async() => {
@@ -129,7 +106,7 @@ await GitMainPage.checkH1teext()
                 await SearchPage.CheckTextSearch()   
                 
         })
-it ("TestCase 5", async () => {
+xit ("TestCase 5", async () => {
 
 //1 Відкрити сайт GitHub
         await browser.url('https://github.com');

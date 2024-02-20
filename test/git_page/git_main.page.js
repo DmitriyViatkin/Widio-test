@@ -7,7 +7,7 @@ class GitMainPage {
     get password () {'D1i1234567@'}
     get inputpassword () {return $('#password')}
     get text () {return $('.text-mono.text-gray-light-mktg')} 
-    get ContinueBtn () {return $('.js-continue-button.signup-continue-button.form-control.px-3.width-full.width-sm-auto.mt-4 mt-sm-0')}
+    get ContinueBtn () {return $('//*[@id="email-container"]/div[2]/button')}
     get inputUserName () {return $('#login')}
     get UserName () {'iIvanR42'}
     get checkBox () {return $('#opt_in')}
@@ -53,16 +53,23 @@ class GitMainPage {
     async clickOnContinueBtn(){
         (await this.ContinueBtn).click()
     }
-    async InputEmail(mail){
-        (await this.inputEmail).addValue(mail)
+    async InputEmail(){
+        (await this.inputEmail).setValue('ivanoviv19891@gmail.com')
     }
-    async inputpassword(password){
-        (await this.inputpassword).addValue(password)
+    async InputPassword() {
+        (await this.inputpassword).addValue('D1i1234567@')
     }
     async clickOnSignupBtn(){
         (await this.SignupBtn).click()
     }
        
+    async waitUntilPas(){
+        await browser.waitUntil(async () =>{
+        return (await this.inputpassword).isDisplayed();
+        },50000,"Button is not displayed")
+        browser.pause(2000)}
+
+
     async waitUntilText(){
         await browser.waitUntil(async () =>{
         return (await this.inputEmail).isDisplayed();
